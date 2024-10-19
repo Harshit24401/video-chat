@@ -16,7 +16,7 @@ import {
   updateDoc,
   addDoc,
 } from "firebase/firestore";
-import { document } from "postcss";
+
 // Create the context
 const AppContext = createContext();
 
