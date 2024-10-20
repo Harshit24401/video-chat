@@ -80,6 +80,7 @@ export const AppProvider = ({ children }) => {
     callInput.value = callDoc.id;
     alert(`the key for the call is ${callInput.value}`);
     console.log(callInput.value);
+    key.innerText = callInput.value;
 
     // Get candidates for caller, save to db
     peerConnectionRef.current.onicecandidate = (event) => {
