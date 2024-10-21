@@ -31,7 +31,10 @@ export const AppProvider = ({ children }) => {
     try {
       const stream = await navigator.mediaDevices.getUserMedia({
         video: true,
-        audio: true,
+        audio: {
+          noiseSuppression: false,
+          echoCancellation: false,
+        },
       });
       localStreamRef.current = stream;
       console.log("Got media stream:", stream);
