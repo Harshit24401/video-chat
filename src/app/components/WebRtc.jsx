@@ -8,14 +8,12 @@ const WebRTC = () => {
   const { getUserMedia, createPeerConnection, callButt, ansButt } =
     useAppContext();
 
-  
-
   return (
     <div>
       <Typography variant="h2">1. Start your Webcam</Typography>
       <div className="videos">
         <Typography variant="h6">Local Stream</Typography>
-        <video id="webcamVideo" autoPlay playsInline />
+        <video id="webcamVideo" autoPlay playsInline muted />
         <Typography variant="h6">Remote Stream</Typography>
         <video id="remoteVideo" autoPlay playsInline />
       </div>
